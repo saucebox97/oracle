@@ -213,11 +213,12 @@ FROM tb_emp
 WHERE emp_nm = '김회장'
 ;
 
-
-SELECT 
+-- MAX 가 null을 뱉어낸다
+SELECT
+    -- MAX(emp_nm)
     NVL(MAX(emp_nm), '존재안함') AS emp_nm
 FROM tb_emp
-WHERE emp_nm = '박찬호';
+WHERE emp_nm = '이승엽';
 
 -- NVL2(expr1, expr2, expr3)
 -- expr1의 값이 Null이 아니면 expr2를 반환, Null이면 expr3를 반환

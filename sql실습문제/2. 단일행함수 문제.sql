@@ -26,8 +26,8 @@ FROM dual;
 
 
 
-
-SELECT 
+-- RPAD("값", "총 문자길이", "채움문자") 총 문자길이 - 값 = 채움문자
+SELECT -- RPAD = LENGTH - SUBSTR = *갯수 SUBSTR = ("문자열","시작위치","길이")
     RPAD(SUBSTR(first_name, 1, 3), LENGTH(first_name), '*') AS name
     , LPAD(salary, 10, '*') AS salary
 FROM employees

@@ -86,7 +86,7 @@ SELECT user_id FROM 회원상세정보_86
 
 
 -- #91번
-DROP TABLE 부서_91;
+DROP TABLE 부서_91; -- 테이블을삭제해줌
 
 -- 테이블 작성
 -- 부서테이블

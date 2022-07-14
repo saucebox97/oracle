@@ -2,13 +2,13 @@
 -- CREATE, ALTER, DROP, RENAME, TRUNCATE
 
 DROP TABLE board; -- 테이블을 제거
-
--- CREATE TABLE : 테이블을 생성
+-- DEFAULT는 아무 값도 입력하지 않아도 NULL 값이 아니라 설정한 값이 기본값으로 자동 입력되도록 하는 제약조건
+-- CREATE TABLE : 테이블을 생성 / CLOB
 CREATE TABLE board (
     bno NUMBER (10) -- UNIQUE는 중복배제
     , title VARCHAR2 (200) NOT NULL -- NOT NULL 무언가쓰게함
     , writer VARCHAR2 (20) NOT NULL -- UNIQUE쓰면 1사람이글여러개못씀
-    , content CLOB
+    , content CLOB -- 아주 긴 문자열데이터를 저장할 수 있는 데이터 타입
     , reg_date DATE DEFAULT SYSDATE -- 자동으로 현재시간이들어감
     , view_count NUMBER(10) DEFAULT 0 -- 조회수 0부터시작
 );
